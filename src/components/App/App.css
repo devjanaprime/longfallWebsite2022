@@ -2,17 +2,29 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-article {
+  padding: 0% 10% 0% 10%;
+  font-size:x-large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Article-image-wide{
+  float: left;
+  margin: 1%;
+  width: 40%;
 }
 
+.Article-image-tall{
+  margin: 1%;
+  width: 80%
+}
+
+.Align-left{
+  text-align: left;
+}
+
+.Align-right{
+  text-align: right;
+}
 .App-header {
   background-color: #282c34;
   min-height: 15vh;
