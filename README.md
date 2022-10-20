@@ -1,3 +1,3 @@
 # website for the band longfall for whom I play drums
 
-React JS w/ Redux
+react JS Site that will (hopefully) be able to be hosted on Dreamhost when done.
