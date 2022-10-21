@@ -4,18 +4,28 @@
 
 .App-article {
   padding: 0% 10% 0% 10%;
-  font-size:x-large;
+  font-size:large;
 }
 
-.Article-image-wide{
-  float: left;
+.Article-image-wide-left{
   margin: 1%;
   width: 40%;
+  float: left;
+}
+
+.Article-image-wide-right{
+  margin: 1%;
+  width: 40%;
+  float: right;
 }
 
 .Article-image-tall{
   margin: 1%;
   width: 80%
+}
+
+.Align-justifyt{
+  text-align: justify;
 }
 
 .Align-left{

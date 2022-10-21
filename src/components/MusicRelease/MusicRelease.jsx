@@ -7,23 +7,24 @@ const [ spotify, setSpotify ] = useState( true );
   return (
   <div className="App-article">
     <hr />
-      <h1>Title</h1>
-
+      <h1>{ props.post.title }</h1>
       { spotify
         ?<div><iframe 
-          src="https://open.spotify.com/embed/album/2xiTZMXThFDUYokKsbZH58?utm_source=generator" 
-          width="50%" 
+          src={ props.post.spotifyUrl }
+          width="55%" 
           height="420"
         />
         <p>Switch to <span onClick={ ()=> setSpotify( !spotify  ) }>Apple Music</span></p></div>
         :<div className=''><iframe 
-          src="https://embed.music.apple.com/us/album/what-we-found/1492961027"
-          width="50%" 
+          src={ props.post.appleMusicUrl }
+          width="55%" 
           height="420"
         />
-        <p>Switch to <span onClick={ ()=> setSpotify( !spotify  ) }>Spofity</span></p></div>
-        }
-        <p> Descirption</p>
+        <p>Switch to <span onClick={ ()=> setSpotify( !spotify  ) }>Spotify</span></p></div>
+        }      
+        {props.post.text.map( ( line, i ) =>( <p key={ i }>{line}</p> ) )}
+        <h5>Related: {props.post.links.map( ( link, i )=>( <a key={ i } href={ link.url }>{ link.text }</a> ) ) }</h5>
+        <br clear="all" />
    </div>
   );
 }
