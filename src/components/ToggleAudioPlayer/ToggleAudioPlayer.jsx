@@ -1,5 +1,5 @@
 import { useSelector, useDispatch }from 'react-redux';
-import { setAudioSpotify, setAudioAppleMusic } from '../../features/preferencesSlice';
+import { setAudio } from '../../features/preferencesSlice';
 
 function ToggleAudioPlayer( props ) {
     const state = useSelector( state => state );
@@ -7,8 +7,8 @@ function ToggleAudioPlayer( props ) {
     return (
     <span>
         { state.preferences.audioPlayer === 'Spotify'
-        ? <button onClick={ ()=> dispatch( setAudioAppleMusic() ) }>Apple Music</button>
-        :<button onClick={ ()=> dispatch( setAudioSpotify() ) }>Spotify</button>
+        ? <button onClick={ ()=> dispatch( setAudio( 'AppleMusic' ) ) }>Apple Music</button>
+        :<button onClick={ ()=> dispatch( setAudio( 'Spotify' ) ) }>Spotify</button>
         }
     </span>
     );

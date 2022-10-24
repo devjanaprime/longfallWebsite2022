@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PostData from '../../PostData/postData';
+import PostData from '../../app/postData';
 import Post from "../Post/Post";
 
 

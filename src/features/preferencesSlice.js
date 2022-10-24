@@ -9,17 +9,12 @@ export const preferencesSlice = createSlice({
     initialState,
     reducers:
     {
-        setAudioSpotify: ( state ) =>{
-            state.audioPlayer = 'Spotify' ;
-            console.log( 'in setAudioSpotify' );
+        setAudio: ( state, action ) =>{
+            state.audioPlayer = action.payload ;
         },
-        setAudioAppleMusic: ( state ) =>{
-            console.log( 'in setAudioAppleMusic' );
-            state.audioPlayer = 'Apple Music' ;
-        }
     }
 })
 
-export const { setAudioSpotify, setAudioAppleMusic } = preferencesSlice.actions;
+export const { setAudio } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;
