@@ -1,27 +1,34 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setAudioSpotify, setAudioAppleMusic } from '../../features/preferencesSlice';
+import ToggleAudioPlayer from '../ToggleAudioPlayer/ToggleAudioPlayer';;
 
 
 let MusicRelease=( props )=>{
-const [ spotify, setSpotify ] = useState( true );
+
+  const dispatch = useDispatch();
+  const spotify = useSelector( ( state ) => state.preferences.audioPlayer );
 
   return (
   <div className="App-article">
     <hr />
       <h1>{ props.post.title }</h1>
-      { spotify
+      { spotify === 'Spotify'
         ?<div><iframe 
           src={ props.post.spotifyUrl }
           width="55%" 
           height="420"
+          title="Spotify player"
         />
-        <p>Switch to <span onClick={ ()=> setSpotify( !spotify  ) }>Apple Music</span></p></div>
+         </div>
         :<div className=''><iframe 
           src={ props.post.appleMusicUrl }
           width="55%" 
           height="420"
+          title="Apple Music player"
         />
-        <p>Switch to <span onClick={ ()=> setSpotify( !spotify  ) }>Spotify</span></p></div>
-        }      
+        </div>
+        }    
+        <p>Switch to <ToggleAudioPlayer /></p>
         {props.post.text.map( ( line, i ) =>( <p key={ i }>{line}</p> ) )}
         <h5>Related: {props.post.links.map( ( link, i )=>( <a key={ i } href={ link.url }>{ link.text }</a> ) ) }</h5>
         <br clear="all" />

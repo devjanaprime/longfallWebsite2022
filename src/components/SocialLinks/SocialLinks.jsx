@@ -1,7 +1,7 @@
 function SocialLinks( props ) {
   return (
   <span>
-      facebook, youtube, spotify, applemusic
+      facebook, youtube, spotify, applemusic, soundcloud
   </span>
   );
 }

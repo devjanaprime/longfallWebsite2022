@@ -1,10 +1,10 @@
 import SocialLinks from "../SocialLinks/SocialLinks";
+import EmailList from '../EmailList/EmailList';
 
 function Menu( props ) {
   return (
   <div>
-      <SocialLinks />
-      <h1>Menu</h1>
+      <SocialLinks /><EmailList />
   </div>
   );
 }
