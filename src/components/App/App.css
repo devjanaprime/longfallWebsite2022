@@ -6,6 +6,7 @@
 .App-article {
   padding: 0% 10% 0% 10%;
   font-size:large;
+  font-size: calc(6px + 2vmin);
 }
 
 .Article-image-wide-left{
@@ -22,10 +23,10 @@
 
 .Article-image-tall{
   margin: 1%;
-  width: 80%
+  width: 50%
 }
 
-.Align-justifyt{
+.Align-justify{
   text-align: justify;
 }
 
@@ -36,20 +37,25 @@
 .Align-right{
   text-align: right;
 }
+
 .App-header {
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url( '../../../public/images/shoes.jpg' );
+}
+
+.Headline{
+  font-size: calc(18vmin);
 }
 
 .App-footer {
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
